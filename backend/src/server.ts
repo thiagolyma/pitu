@@ -1,5 +1,8 @@
 import app from './app';
+import database from './database';
 
-app.listen(3000);
+database.sync({force: true});
+console.log('Database Postgre running at 5432');
 
-console.log('Server running at 3000');
+app.listen(3001);
+console.log('Server running at 3001');
